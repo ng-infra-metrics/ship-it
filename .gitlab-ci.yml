@@ -6,6 +6,7 @@ variables:
 test:cargo:
     script:
     - rustc --version && cargo --version
+    - apt-get install -y cmake libcurl4-openssl-dev libelf-dev libdw-dev binutils-dev
     - cargo install cargo-travis
     - time cargo test --verbose --jobs 1 --release
     - cargo coverage
