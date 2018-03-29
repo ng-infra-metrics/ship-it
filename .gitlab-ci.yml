@@ -1,4 +1,4 @@
-image: "scorpil/rust:stable"
+image: "rust:jessie"
 
 variables:
     CARGO_HOME: $CI_PROJECT_DIR/cargo
@@ -6,7 +6,9 @@ variables:
 test:cargo:
     script:
     - rustc --version && cargo --version
+    - cargo install cargo-travis
     - time cargo test --verbose --jobs 1 --release
+    - cargo coverage
     cache:
         paths:
         - target/
