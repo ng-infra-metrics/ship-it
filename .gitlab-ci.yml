@@ -5,8 +5,6 @@ variables:
 
 test:cargo:
     script:
-    - du -sh target
-    - du -sh cargo
     - rustc --version && cargo --version
     - time cargo test --verbose --jobs 1 --release
     cache:
