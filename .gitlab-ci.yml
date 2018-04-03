@@ -12,12 +12,12 @@ docker:
   script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com
     - cd ci/docker/rust
-    - docker build --no-cache -t registry.gitlab.com/dzamlo/gitlab-ci-rust-test/rust:latest .
-    - docker push registry.gitlab.com/dzamlo/gitlab-ci-rust-test/rust:latest
+    - docker build --no-cache -t registry.gitlab.com/ship-it/gitlab-ci-rust-test/rust:latest .
+    - docker push registry.gitlab.com/ship-it/gitlab-ci-rust-test/rust:latest
 
 .rust_test_template: &rust_test_template
   stage: test
-  image: "registry.gitlab.com/dzamlo/gitlab-ci-rust-test/rust:latest"
+  image: "registry.gitlab.com/ship-it/gitlab-ci-rust-test/rust:latest"
   cache:
     key: "$CI_JOB_NAME-$CI_COMMIT_REF_NAME"
     paths:
