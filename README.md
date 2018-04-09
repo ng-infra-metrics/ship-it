@@ -1,5 +1,8 @@
 # ship-it
 
+[![GitLab CI Status](https://gitlab.com/ship-it/ship-it/badges/master/build.svg)](https://gitlab.com/ship-it/ship-it) [![AppVeyor CI Status](https://ci.appveyor.com/api/projects/status/7k9emo9byxy8y8wk/branch/master?svg=true)](https://ci.appveyor.com/project/ChristianWitts/ship-it/branch/master)
+
+
 A log shipper similar to logstash and fluentd, written in Rust, initially as a learning
 exercise for myself, and then adding a tranche of features as time goes on and I get 
 more familiar with the language, and the tooling I want to plug it into.
