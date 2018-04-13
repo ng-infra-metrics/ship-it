@@ -81,7 +81,9 @@ test-prerelase:
     - rustup --version
     - rustc --version
     - cargo --version
+    - cargo install cargo-tarpaulin
   script:
       - cargo test --all --verbose
       - cargo fmt --all --verbose -- --write-mode=diff
+      - cargo tarpaulin -v
 

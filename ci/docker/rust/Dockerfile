@@ -12,3 +12,5 @@ RUN rustup component add --toolchain nightly rustfmt-preview
 
 RUN cargo +nightly install clippy
 
+RUN cargo install cargo-tarpaulin
+
